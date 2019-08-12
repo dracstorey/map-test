@@ -1,0 +1,17 @@
+  
+    <ons-page id="map2">
+     <ons-button modifier="large" onCLick="loadScript(function() {setTimeout(function(){var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8}); }, 2000);})">Click to see map and add location</ons-button>
+     <div id="map" style="height:300px"></div>
+     <script>
+      function loadScript(callback) 
+      {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-HwkM6q2uTCDGCky01IgKwzIMxwjfJ4';
+      document.getElementById("map2").appendChild(script);
+      callback();
+      };
+      </script>
+    </ons-page>

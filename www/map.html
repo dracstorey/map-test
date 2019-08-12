@@ -1,0 +1,35 @@
+
+<ons-page id="map">
+    <script>
+
+       function mapInit() 
+      {
+          var map;
+          map = new google.maps.Map(document.getElementById('maps'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      };
+
+       function loadScript() 
+      {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-HwkM6q2uTCDGCky01IgKwzIMxwjfJ4&callback=mapInit()';
+      document.getElementById("map").appendChild(script);   
+      };
+
+      function initialize(callback) 
+      {
+          var content = document.getElementById('map');
+          content.innerHTML = "<p> See map below:</p><div id='maps'  style='height:400px'></div>";
+          callback();
+      }
+    window.onload = initialize(function() {
+  ons.ready(function() {alert('hi');
+})};
+
+      
+    </script>
+</ons-page>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Synchronous Loading</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+          
+    <script>
+      const loadPage = (page) => {
+      //document.querySelector('#menu').close();
+      document.querySelector('#navigator').bringPageTop(page, { animation: 'fade' })};;
+      </script>
+  </head>
+  <body>
+  <ons-navigator id="navigator">
+    <ons-page id="index">
+    <ons-button modifier="large" onCLick="loadPage('map2.html')">large</ons-button>
+    </ons-page>
+  </ons-navigator>
+
+
+  </body>
+</html>

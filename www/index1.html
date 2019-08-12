@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+    <script>
+      function move()
+      {
+        alert('hi');
+        
+      }
+
+      const loadPage = (page) => {
+      //document.querySelector('#menu').close();
+      document.querySelector('#navigator').bringPageTop(page, { animation: 'fade' });
+};
+    </script>
+</head>
+<body>
+  <ons-navigator id="navigator">
+<ons-page id="home">
+  <ons-toolbar id="home-toolbar">
+  <div class="left">
+   <ons-toolbar-button onclick="loadPage('map.html')">
+    Map
+   </ons-toolbar-button>
+  </div>
+</ons-toolbar>
+  Hello!
+</ons-page>
+</ons-navigator>
+</body>
+
+</html>

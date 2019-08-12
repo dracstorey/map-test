@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+    <script>
+        //
+        // TODO: Write JavaScript code here
+        //
+    </script>
+</head>
+<body>
+    <!-- TODO: Please edit here -->
+</body>
+</html>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-HwkM6q2uTCDGCky01IgKwzIMxwjfJ4&callback=initMap"
+ async defer></script>
+
+ function loadScript() 
+      {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-HwkM6q2uTCDGCky01IgKwzIMxwjfJ4&callback=initialize';
+      document.body.appendChild(script);    
+      }
+
+
+       function initialize() 
+      {
+        alert("Map loaded, do some other stuff...");
+        ons.ready(function() {
+          var content = document.getElementById('map');
+          content.innerHTML = "<p> See map below:</p><div id='maps'  style='height:400px'></div>";
+  });
+          var map;
+          map = new google.maps.Map(document.getElementById('maps'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+
+
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-HwkM6q2uTCDGCky01IgKwzIMxwjfJ4&callback=initMap"
+ async defer></script>
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+    <script>
+      function move()
+      {
+        alert('hi');
+        
+      }
+
+      const loadPage = (page) => {
+      //document.querySelector('#menu').close();
+      document.querySelector('#navigator').bringPageTop(page, { animation: 'fade' });
+};
+    </script>
+
+
+</head>
+<body>
+
+
+
+<ons-page id="map">
+<p> See map below:</p><div id='maps'  style='height:400px'></div>
+
+        <script>
+
+       function initMap() 
+      {
+          var newmap;
+          newmap = new google.maps.Map(document.getElementById('maps'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      };
+
+       function loadScript() 
+      {
+     
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-HwkM6q2uTCDGCky01IgKwzIMxwjfJ4&callback=initMap()';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+      alert('hi');
+      };
+
+      function initialize(callback) 
+      {
+          callback();
+      }
+
+      function test_al()
+      {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.defer = true;
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-HwkM6q2uTCDGCky01IgKwzIMxwjfJ4&callback=initMap()';
+        document.getElementById("map").appendChild(script);
+        alert('hi');
+      }
+
+    window.onload = initialize(function() {test_al()});
+
+      
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-HwkM6q2uTCDGCky01IgKwzIMxwjfJ4"></script>
+
+</ons-page>
+</body>
+</html>
+
